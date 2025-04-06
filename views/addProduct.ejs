@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('component/head') %>
+<body>
+    <%- include('component/nav') %>
+        <div class="content">
+            <h2 style="color: #0F3DDE; text-align: center;">Add New Product</h2>
+            <form id="addProductForm" method="POST" action="/products/add" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label for="categoryName" class="form-label">Category Name</label>
+                    <select class="form-control" id="categoryName" name="Category_ID" required>
+                        <% categories.forEach(category => { %>
+                            <option value="<%= category.Category_ID %>"><%= category.Category_Name %></option>
+                        <% }) %>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="productName" class="form-label">Product Name</label>
+                    <input type="text" class="form-control" id="productName" name="Product_Name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="productDescription" class="form-label">Product Description</label>
+                    <input type="text" class="form-control" id="productDescription" name="Product_Description" required>
+                </div>
+                <div class="mb-3">
+                    <label for="productImage" class="form-label">Product Image</label>
+                    <input type="file" class="form-control" id="productImage" name="Product_Image" required>
+                </div>
+                <div class="mb-3">
+                    <label for="productPrice" class="form-label">Product Price</label>
+                    <input type="number" class="form-control" id="productPrice" name="Product_Price" required>
+                </div>
+                <div class="mb-3">
+                    <label for="productPricePromotion" class="form-label">Product Price Promotion</label>
+                    <input type="number" class="form-control" id="productPricePromotion" name="Product_Price_Promotion" required>
+                </div>
+                <div class="mb-3">
+                    <label for="discount" class="form-label">Discount (%)</label>
+                    <input type="number" class="form-control" id="discount" name="Discount" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Add Product</button>
+                <a href="/products" class="btn btn-secondary">Cancel</a>
+            </form>
+            
+        </div>
+    </div>
+
+    <%- include('component/footer') %>
+</body>
+</html>
+        

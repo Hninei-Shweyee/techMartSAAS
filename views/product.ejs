@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('component/head') %>
+    
+<body>
+    <%- include('component/nav') %>
+<div class="content">
+        <h2 class="mb-3">Products</h2>
+        <div class="table-responsive">
+            <table class="table table-bordered align-middle text-center">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Category</th>
+                        <th>Product Name</th>
+                        <th>Description</th>
+                        <th>Image</th>
+                        <th>Price</th>
+                        <th>Promotion Price</th>
+                        <th>Discount</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Women</td>
+                        <td>Classic Denim Jacket</td>
+                        <td>Available</td>
+                        <td><img src="image1.jpg"class="img-fluid rounded" width="50" alt="Product"></td>
+                        <td>$59.99</td>
+                        <td>$53.99</td>
+                        <td>10%</td>
+                        <td>
+                            <span class="material-icons">edit</span>
+                            <span class="material-icons">delete</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Men</td>
+                        <td>Slim Fit T-shirt</td>
+                        <td>Available</td>
+                        <td><img src="image2.jpg" class="img-fluid rounded" width="50" alt="Product"></td>
+                        <td>$19.99</td>
+                        <td>$16.99</td>
+                        <td>15%</td>
+                        <td>
+                            <button class="btn btn-warning btn-sm">Edit</button>
+                            <button class="btn btn-danger btn-sm">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <%- include('component/footer') %>
+</body>
+</html>
